@@ -1,9 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Crystal Collector</title>
+	<title>Bug Collector</title>
+	<!-- Link to Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+<div class="container">
+
+	<h1>Bug Collector</h1>
+
+	<p>You'll be given a random number at the beginning of the game.</p>
+
+	<p>There are four bugs below. When you click on each, you will add a specific amount of points to your total score. You won't know the value of each bug.</p>
+
+	<p>You win the game is you match the number given to you at the get-go. You lose if your number goes above the random number.</p>
+
+	<p>When each game starts, the bugs will have different values.</p>
+	
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-8">
+				<div class="card" id="numberContainer">
+  					<div class="card-body">	
+  						<h3>Random Number</h3>
+  						<div id="randomNumber"></div>
+  					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card">
+  					<div class="card-body">
+						<h4>Wins </h4>
+						<div id="wins"></div>
+  					</div>
+				</div>
+
+				<div class="card">
+  					<div class="card-body">
+						<h4>Losses </h4>
+						<div id="losses"></div>
+  					</div>
+				</div>
+
+			</div>
+	</div>
+</div>
+
+	<div class="container" id="options">
+		<button id="button-1"><img src="assets/images/bug-1.png" alt="first bug"></button>
+		<button id="button-2"><img src="assets/images/bug-3.png" alt="second bug"></button>
+		<button id="button-3"><img src="assets/images/bug-6.png" alt="third bug"></button>
+		<button id="button-4"><img src="assets/images/bug-8.png" alt="fourth bug"></button>
+	</div>
+
+	<div class="col-md-8">
+		<div class="card" id="totalContainer">
+			<div class="card-body">	
+				<h3>Your total score is </h3>
+				<div id="totalScore"></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- Link to JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
 </body>
 </html>

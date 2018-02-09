@@ -1,0 +1,20 @@
+body {
+	margin: 40px;
+}
+
+img {
+	max-width: 80px;
+}
+
+button {
+	border: none;
+}
+
+#numberContainer {
+	background-color: lightgreen;
+}
+
+#totalContainer {
+	background-color: #FFFF99;
+}
+
