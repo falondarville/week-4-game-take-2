@@ -4,6 +4,7 @@ body {
 
 img {
 	max-width: 80px;
+	margin-bottom: 20px;
 }
 
 button {
@@ -16,5 +17,17 @@ button {
 
 #totalContainer {
 	background-color: #FFFF99;
+}
+
+#options {
+	margin-left: 160px;
+}
+
+#randomNumber {
+	height: 120px;
+}
+
+#mainContent {
+	margin-bottom: 20px;
 }
 

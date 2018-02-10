@@ -1,21 +1,26 @@
 $(document).ready(function() {
 
-//user is given a random number at the beginning of the game
-var randomNumber = Math.ceil(Math.random() * 100);
-$("#randomNumber").html(randomNumber);
+//function to generate random numbers
+var generateNumber = function(min,max) {
+    return Math.ceil(Math.random() * (max - min + 1) + min);
+}
+
+//starting variable
 var totalScore = 0;
 var wins = 0;
 var losses = 0;
+var randomNumber = generateNumber(19,120);
+
+//print random number to page
+$("#randomNumber").html(randomNumber);
 
 //generate random numbers for each button
-var button1 = Math.ceil(Math.random() * 10);
-var button2 = Math.ceil(Math.random() * 10);
-var button3 = Math.ceil(Math.random() * 10);
-var button4 = Math.ceil(Math.random() * 10);
+var button1 = generateNumber(1,12)
+var button2 = generateNumber(1,12)
+var button3 = generateNumber(1,12)
+var button4 = generateNumber(1,12)
 
-//add countainer for total score
 //when I click a button, add random number to total number
-
 $("#button-1").click(function() {
 	totalScore += button1;
 	$("#totalScore").html(totalScore);
@@ -63,21 +68,19 @@ var printStats = function() {
 	$("#losses").html(losses);
 }
 
-//issues with reset again
-
+//resets game
 var resetGame = function() {
-//user is given a random number at the beginning of the game
-	var randomNumber = Math.ceil(Math.random() * 100);
-	var totalScore = 0;
+	randomNumber = generateNumber(19,120);
+	totalScore = 0;
 
 	//update stats
 	$("#randomNumber").html(randomNumber);
 
 //generate random numbers for each button
-	var button1 = Math.ceil(Math.random() * 10);
-	var button2 = Math.ceil(Math.random() * 10);
-	var button3 = Math.ceil(Math.random() * 10);
-	var button4 = Math.ceil(Math.random() * 10);
+	var button1 = generateNumber(1,12)
+	var button2 = generateNumber(1,12)
+	var button3 = generateNumber(1,12)
+	var button4 = generateNumber(1,12)
 }
 
 });
