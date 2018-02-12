@@ -75,6 +75,7 @@ var resetGame = function() {
 
 	//update stats
 	$("#randomNumber").html(randomNumber);
+	$("#totalScore").html(totalScore);
 
 //generate random numbers for each button
 	var button1 = generateNumber(1,12)
